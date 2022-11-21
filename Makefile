@@ -10,8 +10,8 @@ clean:
 	rm -f src/decoder.rs tests/decode_tests.rs
 
 src/decoder.rs: imask.txt gendecoder.py
-	python gendecoder.py imask.txt $@
+	python3 gendecoder.py imask.txt $@
 
 tests/decode_tests.rs: tests/decode_tests.txt gen_decoding_tests.py
-	python gen_decoding_tests.py $(VASM) tests/decode_tests.txt tests/decode_tests.rs
+	python3 gen_decoding_tests.py $(VASM) tests/decode_tests.txt tests/decode_tests.rs
 
